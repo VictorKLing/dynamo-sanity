@@ -1,0 +1,71 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.animate-gradient {
+  animation: gradient 8s ease infinite;
+}
+
+.bg-size-200 {
+  background-size: 200% 200%;
+}
+
+.geometric-background {
+  background: linear-gradient(135deg, #142D55 0%, #4A90FF 100%);
+  position: relative;
+}
+
+.geometric-shape {
+  position: absolute;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  animation: float 6s ease-in-out infinite;
+}
+
+.geometric-shape:nth-child(1) {
+  width: 300px;
+  height: 300px;
+  top: -150px;
+  left: -100px;
+  animation-delay: 0s;
+}
+
+.geometric-shape:nth-child(2) {
+  width: 200px;
+  height: 200px;
+  top: 50%;
+  right: -50px;
+  animation-delay: 2s;
+}
+
+.geometric-shape:nth-child(3) {
+  width: 150px;
+  height: 150px;
+  bottom: -50px;
+  left: 30%;
+  animation-delay: 4s;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-20px) rotate(180deg);
+  }
+  100% {
+    transform: translateY(0) rotate(360deg);
+  }
+}
